@@ -1,0 +1,3 @@
+Server:
+  RunMode: debug
+  HttpPort: 9090
