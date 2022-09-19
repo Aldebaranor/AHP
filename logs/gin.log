@@ -5,8 +5,9 @@
  - using code:	gin.SetMode(gin.ReleaseMode)
 
 [GIN-debug] POST   /ahp/weight               --> demoProject/src/AHP_Gin/handlers/ahp.GetWeight (3 handlers)
-[GIN-debug] POST   /ahp/tree                 --> demoProject/src/AHP_Gin/handlers/tree.GetLeaves (3 handlers)
 [GIN-debug] POST   /ahp/points               --> demoProject/src/AHP_Gin/handlers/ahp.GetPoints (3 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :9090
+[GIN] 2022/09/19 - 17:48:20 | 200 |       1.335ms |       127.0.0.1 | POST     "/ahp/weight"
+[GIN] 2022/09/19 - 17:50:07 | 200 |       956.6µs |       127.0.0.1 | POST     "/ahp/points"
