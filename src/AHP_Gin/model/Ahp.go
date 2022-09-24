@@ -1,12 +1,20 @@
 package model
 
+var ApiCode = &Error{
+	SUCCESS:         10,
+	CheckFAILED:     21,
+	ConditionExceed: 22,
+}
+
 type TreeNode struct {
-	Name     string      `json:"name" bson:"bson_name"`
-	Weight   float64     `json:"weight" bson:"bson_weight"`
-	Children []*TreeNode `json:"children" bson:"bson_children"`
+	Name     string      `json:"name"`
+	Weight   float64     `json:"weight"`
+	Children []*TreeNode `json:"children"`
 }
 
 type Error struct {
-	code    int    `json:"json_code" bson:"bson_code" custom:"my_code"`
-	message string `json:"json_message" bson:"bson_message" custom:"my_message"`
+	SUCCESS         uint            `json:"success"`
+	CheckFAILED     uint            `json:"check_failed"`
+	ConditionExceed uint            `json:"condition_exceed"`
+	Message         map[uint]string `json:"message"`
 }

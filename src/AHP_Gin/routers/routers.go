@@ -7,7 +7,7 @@ import (
 
 func Routers() *gin.Engine {
 	routers := gin.Default()
-	ahpRouter := routers.Group("/ahp")
+	ahpRouter := routers.Group("/demoProject")
 	{
 		ahpRouter.POST("/weight", ahp.GetWeight)
 		ahpRouter.POST("/points", ahp.GetPoints)
