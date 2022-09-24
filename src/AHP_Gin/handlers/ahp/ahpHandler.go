@@ -40,16 +40,16 @@ func GetPoints(context *gin.Context) {
 先序遍历计算所有节点的权重
 */
 func PreOrder(node *model.TreeNode, leaves map[string]float64) map[string]float64 {
-	if node == nil {
+
+	if node.Children == nil {
+		leaves[node.Name] = node.Weight
 		return leaves
 	}
 	for _, kid := range node.Children {
 		kid.Weight = kid.Weight * node.Weight
-		if kid.Children == nil {
-			leaves[kid.Name] = kid.Weight
-		}
 		PreOrder(kid, leaves)
 	}
+
 	return leaves
 }
 
@@ -87,6 +87,7 @@ func GetWeight(context *gin.Context) {
 			"code": model.ApiCode.ConditionExceed,
 			"msg":  model.ApiCode.Message[model.ApiCode.ConditionExceed],
 		})
+		return
 	}
 
 	w1 := make([]float64, mtxLen)
@@ -128,6 +129,7 @@ func GetWeight(context *gin.Context) {
 			"code": model.ApiCode.CheckFAILED,
 			"msg":  model.ApiCode.Message[model.ApiCode.CheckFAILED],
 		})
+		return
 	}
 	ans := w2
 	result := make(map[string]float64, len(ans))

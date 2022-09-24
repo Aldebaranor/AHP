@@ -9,5 +9,7 @@
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :9090
-[GIN] 2022/09/24 - 16:02:25 | 200 |            0s |       127.0.0.1 | POST     "/ahp/weight"
-[GIN] 2022/09/24 - 16:02:52 | 200 |       799.4µs |       127.0.0.1 | POST     "/ahp/points"
+[GIN] 2022/09/24 - 16:31:13 | 200 |    2.9449896s |       127.0.0.1 | POST     "/ahp/points"
+[GIN] 2022/09/24 - 16:35:55 | 200 |         4m12s |       127.0.0.1 | POST     "/ahp/points"
+[GIN] 2022/09/24 - 16:38:19 | 200 |          2m9s |       127.0.0.1 | POST     "/ahp/points"
+[GIN] 2022/09/24 - 16:38:52 | 200 |       653.3µs |       127.0.0.1 | POST     "/ahp/points"
